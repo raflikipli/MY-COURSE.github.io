@@ -1,0 +1,4397 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+/* Bagian Body */
+
+body {
+    background-color: rgb(240, 240, 240);
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Bagian Header */
+
+header{
+    top: 0;
+    margin-bottom: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(240, 240, 240);
+    border: 1px solid rgb(190, 188, 188);
+    position: sticky;
+    z-index: 1000;
+    height: 80px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}        
+
+header .logo p{
+    position: relative;
+    margin: 10px;
+    line-height: 58px;          
+    float: left;
+    right: -65px;
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+header .logo img{
+    position: absolute;
+    top: -12.5%;
+    left: -0.5%;
+    height: 100px;
+}
+
+header nav{
+    float: right;
+}
+
+header nav ul{
+    display: flex;
+}
+
+header nav ul li{
+    list-style: none;
+}
+
+header nav ul li a{
+    display: block;
+    position: relative;
+    color: black;
+    padding: 25px;
+    left: -22px;
+    line-height: 30px;
+}
+
+header nav ul li a:hover{
+    color: black;
+    text-decoration: underline;
+    background-color: rgb(206, 199, 199);
+    filter: brightness(120%);
+    transition: 250ms;
+}
+
+.toggle-button{
+    display: none;
+}
+
+.toggle-button img{
+    position: absolute;
+    margin-top: 21px;
+    right: 4%;
+    height: 35px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Bagian Hamburger Menu */
+
+.dropdown-menu{
+    display: none;
+    position: absolute;
+    right: 0rem;
+    top: 80px;
+    height: 0;
+    width: 200px;
+    /* background-color: rgba(225, 225, 225, 0.1); */
+    background-color: rgba(240, 240, 240, 0.3);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown-menu.open{
+    border: 1px black solid;
+    height: 240px;
+}
+
+.dropdown-menu.notopen{
+    height: 0;
+}
+
+.dropdown-menu li{
+    display: flex;
+    padding: 0.7rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown-menu li a{
+    color: black;
+    margin-top: 5.7px;
+}
+
+main{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+main .container{
+    width: 100%;
+}
+
+main .home{
+    margin: 0;
+}
+
+main .home-container{
+    width: 100%;
+}
+
+main .home img{
+    /* margin-top: 100px; */
+    height: 490px;
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+    /* box-shadow: 2px 2px 2px 1.5px rgba(0, 0, 0, 0.8); */
+}
+
+/* Bagian Promo */
+
+main .promo{
+    margin-top: 80px;
+    width: 100%;
+}
+
+main .promo .promo-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+main .promo .promo-border{
+    margin: 0px;
+    width: 74.3%;
+    border-radius: 10px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* height: 800px; */
+    /* overflow-y: hidden; */
+    /* box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8); */
+}
+
+main .promo .form{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 50px;
+}
+
+/* Swiper */
+
+.swiper {
+    width: 100%;
+    height: 300px;
+  }
+
+  .swiper-slide {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 94%;
+    margin: 10px;
+    margin-bottom: 0;
+    padding: 0;
+  }
+
+main .promo .promo-text{
+    
+}
+
+main .promo .text{
+    /* display: flex; */
+    justify-self: center;   
+}
+
+main .promo .text-container{
+    max-width: 400px;      
+}
+
+main .promo .registrasi-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .promo .button-form button{
+    position: relative;
+    top: 20px;
+    padding: 7.5px 15px 7.5px 15px;
+    cursor: pointer;
+    background-color: rgb(28, 28, 77);
+    color: white;
+}
+
+main button:hover{
+    background-color: rgb(195, 236, 236);
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.5);
+}
+
+/* pop up */
+
+.modal {
+display: none;
+position: fixed;
+z-index: 9999;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+overflow: auto;
+background-color: rgb(0,0,0);
+background-color: rgba(0,0,0,0.4);
+padding-top: 60px;
+overflow: hidden;
+}
+
+.modal-content {
+position: relative;
+bottom: 55px;
+background-color: rgb(240, 240, 240);
+margin: 5% auto;
+padding: 50px;
+border: 1px solid #888;
+width: 50%;
+height: 60%;
+}
+
+main .form-1 input{
+padding: 3.5px;
+margin-top: 5px;
+}
+
+main .form-3 .input-text{
+padding: 3.5px;
+margin-top: 5px;
+}
+
+main .form-3{
+display: grid;
+grid-template-columns: 1fr;
+}
+
+main .form-3 label{
+margin-top: 5px;
+}
+
+main .form-3 .input-text{
+margin-top: 5px;
+padding: 3.5px;
+width: 97.5%;
+}
+
+main .form-3 .input-bermasalah{
+padding: 3.5px;
+margin-top: 5px;
+width: 100%;
+}
+
+main .buton{
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 100px;
+margin-top: 20px;
+margin-left: 10px;
+}
+
+main .buton button{
+padding: 5px;
+background-color: rgb(28, 28, 77);
+color: white;
+}
+
+.close {
+color: #aaa;
+float: right;
+font-size: 28px;
+font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+color: black;
+text-decoration: none;
+cursor: pointer;
+}
+
+/* video */
+
+main .video{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+main video{
+    margin-top: 80px;
+    border-radius: 10px;
+    width: 65%;
+    height: 65%;
+}
+
+/* program */
+
+main .program{
+    width: 100%;
+    margin-top: 80px;
+}
+
+main .program .program-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+main .program .program-box-1{
+    margin-left: 80px;          
+    background-color: white;
+    border-radius: 10px;
+    height: 250px;
+    width: 60%;
+    /* box-shadow: 2px 2px 2px 1.5px rgba(0, 0, 0, 0.8); */
+}
+
+main .program .program-box-2{
+    margin-right: 80px;
+    background-color: white;
+    border-radius: 10px;
+    height: 250px;
+    width: 60%;
+    /* box-shadow: 2px 2px 2px 1.5px rgba(0, 0, 0, 0.8); */
+}
+
+main .program .program-text{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+main .program p{
+    margin-left: 17px;
+    /* text-align: center; */
+    max-width: 90%;
+}
+
+/* cabang */
+
+main .cabang{
+    width: 100%;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+main .cabang-1{
+    width: 74.3%;
+    border-radius: 10px;
+    background-color: white;  
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+main .cabang-1 img{
+    margin: 30px;
+    margin-right: 0;
+    height: 250px;
+}
+
+main .cabang-1 h1{
+    margin: 30px;
+}
+
+main .cabang-1 h3{
+margin-left: 30px;
+}
+
+main .cabang-1 button{
+    display: flex;
+    padding: 7.5px 25px 7.5px 25px;
+    cursor: pointer;
+    background-color: rgb(28, 28, 77);
+    color: white;
+    margin: 75px;
+    margin-bottom: 0;
+    justify-self: center;
+    align-self: center;
+}
+
+/* pembayaran */
+
+main .pembayaran{
+    margin-top: 80px;
+    width: 100%;
+}
+
+main .pembayaran .pembayaran-container{
+    display: grid;
+    grid-template-columns: 1fr;   
+}
+
+main .pembayaran .pembayaran-judul{
+    text-align: center;
+    font-size: 35px;
+}
+
+main .pembayaran .pembayaran-tulisan{
+    text-align: center;
+}
+
+main .pemisah{
+    background-color: white;
+    width: 80%;
+    margin: 0 auto 0 auto;
+    padding: 20px;
+}
+
+main .pemisahh{
+    background-color: white;
+    width: 80%;
+    margin: 0 auto 0 auto;
+    padding: 20px;
+}
+
+main .pembayaran .pembayaran-metode{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-right: 161.5px;
+    margin-left: 161.5px;
+}
+
+main .pembayaran-metode .pembayaran-box{
+    background-color: white;
+    height: 170px;
+    width: 100%;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+}
+
+main .pembayaran-box img{
+    margin: 0 auto 0 auto;
+    position: relative;
+    top: 10px;
+    height: 65px;
+}
+
+main .pembayaran-box .img1{
+    height: 55px;
+}
+
+main .pembayaran-box p{
+    text-align: center;
+    margin: 10px;
+    margin-top: 0;
+    font-size: 15px;
+}
+
+/* testimoni */
+
+.testimoni{
+    margin-top: 80px;
+    width: 100%;
+}
+
+.testimoni-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    margin-left: 161.5px;
+    margin-right: 161.5px;
+    gap: 40px;
+    overflow: hidden;
+}
+
+.testimoni-border{
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.testimoni img{
+    height: 70px;
+    width: 70px;
+    margin: 10px auto 0 auto;
+    border-radius: 50%;
+}
+
+.testimoni h3{
+    margin: 10px auto 0 auto;
+}
+.testimoni p{
+    margin: 10px auto 20px auto;
+    text-align: center;
+    max-width: 270px;
+}
+
+/* footer */
+
+footer{
+    margin-top: 80px;
+    background-color: black;
+    padding-bottom: 1px;
+}
+
+footer .footer-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+footer .about{
+    width: 100%;
+    margin-top: 16px;
+    margin-left: 40px;
+}
+
+footer .about .about-container{
+    margin: 10px;
+}
+
+footer .about .about-text{
+    color: white;
+}
+
+footer .about .about-text h2{
+    text-align: center;
+    
+}
+
+.pemisah-garis{
+    margin-top: 10px;
+    background-color: white;
+    padding: 2.5px
+}
+
+footer .about .about-text p{
+    margin: 10px;
+}
+
+footer .contact{
+    width: 100%;
+    overflow: hidden;
+    margin-top: 16px;
+}
+
+footer .contact .contact-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+}
+
+footer .contact .judul-contact{
+    margin: 10px;
+}
+
+footer .contact-person .contact-box{
+    display: flex;
+    flex-direction: row;
+    margin-left: 185px;
+    transition: 0.3s;
+}
+
+footer .contact-person .contact-box img{
+    height: 50px;
+    cursor: pointer;
+}
+
+footer .contact-person .contact-box p{
+   color: white;
+   margin: auto 0;
+   font-size: 25px;
+   cursor: pointer;
+}
+
+footer .contact-box:hover {
+    transition: 0.3s;
+    transform: scale(1.1);
+}
+
+footer .contact-sosmed .about-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5rem;
+} 
+
+footer .contact-sosmed .about-img img{
+    height: 35px;
+    margin: 0 15px 0 15px;
+}
+
+/* bagian responsive*/
+
+@media (max-width: 1100px){
+    main .promo .promo-border{
+        margin: 0px;
+        width: 74.3%;
+        border-radius: 10px;
+        padding: 0;
+        background-color: white;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        /* height: 800px; */
+        /* overflow-y: hidden; */
+        /* box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8); */
+    }
+
+    .swiper {
+        margin-top: 30px;
+        position: relative;
+        left: 30px;
+        width: 100%;
+        height: 250px;
+      }
+    
+      .swiper-slide {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+    
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        
+      }
+
+    main .promo .text-container{
+    margin-top: 0;   
+    margin-left: 30px;        
+}
+
+    main .promo .text{
+        text-align: center;
+        margin-top: 0;
+        font-size: 13px;
+}
+
+.swiper-pagination{
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 992px) {
+
+.menu-icon {
+        display: flex;
+    }
+    
+    header nav{
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 50px);
+        background: #333;
+        top: 80px;
+        left: -100%;
+    }
+
+    header .logo p{
+        right: -14%;
+    }
+
+    header .logo img{
+        left: -2.3%;
+    }
+
+    nav{
+        display: none;
+    }
+
+    .toggle-button{
+        display: block;
+
+    }
+
+    .dropdown-menu{
+        display: block;
+        width: 250px;
+    }
+
+    .dropdown-menu.open{
+        border: 1px black solid;
+        height: 340px;
+    }
+
+    .dropdown-menu li{
+        margin-top: 16px;
+    }
+
+    main .promo .promo-border{
+        margin: 0px;
+        width: 74.3%;
+        border-radius: 10px;
+        padding: 0;
+        background-color: white;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        /* height: 800px; */
+        /* overflow-y: hidden; */
+    
+        /* box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8); */
+    }
+
+    .swiper {
+        margin-top: 30px;
+        position: relative;
+        left: 30px;
+        width: 100%;
+        height: 250px;
+      }
+    
+      .swiper-slide {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+    
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        
+      }
+
+    main .promo .text-container{
+    margin-top: 0;   
+    margin-left: 30px;        
+}
+
+    main .promo .text{
+        text-align: center;
+        margin-top: 0;
+        font-size: 13px;
+}
+
+.modal-content {
+position: relative;
+top: 75px;
+background-color: rgb(240, 240, 240);
+margin: 5% auto;
+padding: 50px;
+padding-bottom: 110px;
+border: 1px solid #888;
+width: 50%;
+height: 35%;
+}
+
+main .video .video-container{
+    
+    margin: 0 auto 0 auto;
+}
+
+main video{
+    margin-top: 80px;
+    border-radius: 10px;
+    width: 74.5%;
+    height: 74.5%;
+}
+
+main .cabang-1 img{
+    margin: 30px;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    height: 200px;
+}
+
+main .cabang-1 h1{
+    margin: 30px;
+}
+
+main .cabang-1 h3{
+    margin-left: 30px;
+}
+
+main .cabang-1 button{
+    display: flex;
+    padding: 7.5px 25px 7.5px 25px;
+    cursor: pointer;
+    background-color: rgb(28, 28, 77);
+    color: white;
+    margin-bottom: 30px;
+    justify-self: center;
+    align-self: center;
+}
+
+.testimoni{
+    margin-top: 80px;
+    width: 100%;
+}
+
+.testimoni-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    margin-left: 150px;
+    margin-right: 150px;
+    gap: 40px;
+}
+
+.testimoni-border{
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.testimoni img{
+    height: 70px;
+    width: 70px;
+    margin: 10px auto 0 auto;
+    border-radius: 50%;
+}
+
+.testimoni h3{
+    margin: 10px auto 0 auto;
+}
+.testimoni p{
+    margin: 10px auto 20px auto;
+    text-align: center;
+    max-width: 270px;
+    font-size: 13px;
+}
+
+.ulasan{
+    margin-top: 35px;
+    width: 100%;
+}
+
+.ulasan-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin: 35px 161.5px 35px 161.5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.ulasan-carousel {
+    border-radius: 10px;
+    text-align: center;
+    background-color: white;
+    height: 170px;
+    width: 60%;
+    margin: 0 auto 0 auto;
+}
+
+.carousel-container {
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease-in-out;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.carousel-item {
+    text-align: center;
+    min-width: 100%;
+    margin: 0 auto 0 auto;
+}
+
+.carousel-item img{
+    margin-top: 10px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.carousel-item h3{
+    margin: 0 0 0 0;
+}
+
+.carousel-item p{
+    margin-top: 5px;
+    text-align: center;
+    max-width: 280px;
+}
+
+.carousel-item .orang{
+    display: flex;
+    margin: 0;
+}
+
+.carousel-item .orang img{
+    position: relative;
+    left: 15px;
+}
+
+.carousel-item .orang h3{
+    position: relative;
+    left: 55px;
+}
+
+footer{
+    background-color: black;
+}
+
+footer .footer-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+footer .about{
+    width: 100%;
+    margin-top: 16px;
+    margin-left: 40px;
+}
+
+footer .about .about-container{
+    margin: 10px;
+}
+
+footer .about .about-text{
+    color: white;
+}
+
+footer .about .about-text h2{
+    text-align: center;
+    
+}
+
+.pemisah-garis{
+    margin-top: 10px;
+    background-color: white;
+    padding: 2.5px
+}
+
+footer .about .about-text p{
+    margin: 10px;
+}
+
+footer .contact{
+    width: 100%;
+    overflow: hidden;
+    margin-top: 16px;
+}
+
+footer .contact .contact-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+}
+
+footer .contact .judul-contact{
+    margin: 10px;
+}
+
+footer .contact-person .contact-box{
+    display: flex;
+    flex-direction: row;
+    margin-left: 185px;
+    transition: 0.3s;
+    margin-right: 50px;
+}
+
+footer .contact-person .contact-box img{
+    height: 50px;
+    cursor: pointer;
+}
+
+footer .contact-person .contact-box p{
+   color: white;
+   margin: auto 0;
+   font-size: 25px;
+   cursor: pointer;
+}
+
+footer .contact-box:hover {
+    transition: 0.3s;
+    transform: scale(1.1);
+}
+
+footer .contact-sosmed .about-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0;
+} 
+
+footer .contact-sosmed .about-img img{
+    height: 35px;
+    margin: 0 15px 0 15px;
+}
+
+
+
+}
+
+@media (max-width: 992px) and (min-width: 836px) {
+
+.menu-icon {
+      display: flex;
+  }
+  
+  header nav{
+      position: absolute;
+      width: 100%;
+      height: calc(100vh - 50px);
+      background: #333;
+      top: 80px;
+      left: -100%;
+  }
+
+  header .logo p{
+      right: -14%;
+  }
+
+  header .logo img{
+      left: -2.3%;
+  }
+
+  nav{
+      display: none;
+  }
+
+  .toggle-button{
+      display: block;
+
+  }
+
+.dropdown-menu{
+    display: block;
+    width: 250px;
+}
+
+.dropdown-menu.open{
+    border: 1px black solid;
+    height: 340px;
+}   
+
+.dropdown-menu li{
+    margin-top: 16px;
+}
+
+  main .promo .promo-border{
+    margin: 0px;
+    width: 74.3%;
+    border-radius: 10px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr;
+    /* height: 800px; */
+    /* overflow-y: hidden; */
+
+    /* box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8); */
+}
+.swiper {
+    width: 60%;
+    height: 250px;
+    left: 0;
+  }
+
+  .swiper-slide {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center             ;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin-left: 0;
+  }
+
+  .swiper-pagination{
+    display: none;
+  }
+
+main .promo .text-container{
+margin-top: 0;   
+margin-left: 0;        
+left: 0;
+}
+
+main .promo .text{
+    text-align: center;
+    margin-top: 0;
+    font-size: 13px;
+    margin-left: 0;
+}
+
+/* main .promo .promo-pembungkus-img{
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+    margin-bottom: 0;
+}
+
+main .promo .promo-pembungkus-img img{
+    width: 80%;
+} */
+
+  main .promo .form{
+    margin-top: 30px;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    main .promo .text{
+        text-align: center;
+        font-size: 20px;
+}
+
+main .promo .text-container{
+    margin-top: 20px;     
+    margin-bottom: 30px;      
+}
+
+main .program .program-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    gap: 60px;
+}
+
+main .program .program-box-1{
+    margin-left: 120px;          
+    background-color: white;
+    border-radius: 10px;
+    height: 200px;
+    width: 75%;
+    /* box-shadow: 2px 2px 2px 1.5px rgba(0, 0, 0, 0.8); */
+}
+
+main .program .program-box-2{
+    margin-right: 120px;
+    background-color: white;
+    border-radius: 10px;
+    height: 200px;
+    width: 75%;
+    /* box-shadow: 2px 2px 2px 1.5px rgba(0, 0, 0, 0.8); */
+}
+
+.modal-content {
+position: relative;
+top: 65px;
+background-color: rgb(240, 240, 240);
+margin: 5% auto;
+padding: 50px;
+padding-bottom: 110px;
+border: 1px solid #888;
+width: 50%;
+height: 35%;
+}
+
+main video{
+    margin-top: 80px;
+    border-radius: 10px;
+    width: 74.5%;
+    height: 74.5%;
+}
+
+main .cabang-1 img{
+    margin: 30px;
+    margin-top: 60px;
+    height: 200px;
+}
+
+main .cabang-1 h1{
+    font-size: 20px;
+    margin: 30px;
+}
+
+main .cabang-1 h3{
+    font-size: 15px;
+    margin-left: 30px;
+    max-width: 200px;
+}
+
+main .cabang-1 button{
+    display: flex;
+    padding: 7.5px 25px 7.5px 25px;
+    cursor: pointer;
+    background-color: rgb(28, 28, 77);
+    color: white;
+    margin-top: 0;
+    margin: 55px;
+    justify-self: center;
+    align-self: center;
+}
+
+main .pembayaran .pemisah{
+    background-color: white;
+    margin: 0 121px 0 121px;
+    padding: 20px;
+}
+
+main .pembayaran .pembayaran-metode{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+    margin-left: 121px;
+    margin-right: 121px;
+    gap: 40px;
+}
+
+main .pembayaran-metode .pembayaran-box{
+    background-color: white;
+    height: 170px;
+    width: 100%;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+}
+
+main .pembayaran-box img{
+    margin: 0 auto 0 auto;
+    position: relative;
+    top: 10px;
+    height: 65px;
+}
+
+main .pembayaran-box p{
+    text-align: center;
+    margin: 10px;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.testimoni{
+    margin-top: 80px;
+    width: 100%;
+}
+
+.testimoni-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    margin-left: 121px;
+    margin-right: 121px;
+    gap: 40px;
+}
+
+.testimoni-border{
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.testimoni img{
+    height: 60px;
+    width: 60px;
+    margin: 10px auto 0 auto;
+    border-radius: 50%;
+}
+
+.testimoni h3{
+    margin: 10px auto 0 auto;
+}
+.testimoni p{
+    margin: 10px auto 20px auto;
+    text-align: center;
+    max-width: 270px;
+    font-size: 13px;
+}
+
+.ulasan{
+    margin-top: 35px;
+    width: 100%;
+}
+
+.ulasan-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin: 35px 10px 35px 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.ulasan-carousel {
+    border-radius: 10px;
+    text-align: center;
+    background-color: white;
+    height: 170px;
+    width: 40%;
+    margin: 0 auto 0 auto;
+}
+
+.carousel-container {
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease-in-out;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.carousel-item {
+    min-width: 100%;
+    margin: 0 auto 0 auto;
+}
+
+.carousel-item img{
+    margin-top: 10px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.carousel-item h3{
+    margin: 0 0 0 0;
+}
+
+.carousel-item p{
+    margin-top: 5px;
+    text-align: center;
+    max-width: 280px;
+}
+
+.carousel-item .orang{
+    display: flex;
+    margin: 0;
+}
+
+.carousel-item .orang img{
+    position: relative;
+    left: 15px;
+}
+
+.carousel-item .orang h3{
+    position: relative;
+    left: 55px;
+}
+
+footer .contact-person .contact-box{
+    display: flex;
+    flex-direction: row;
+    margin-left: 185px;
+    transition: 0.3s;
+    margin-right: 110px;
+}
+
+footer .contact-person .contact-box img{
+    height: 50px;
+    cursor: pointer;
+}
+
+footer .contact-person .contact-box p{
+   color: white;
+   margin: auto 0;
+   font-size: 25px;
+   cursor: pointer;
+}
+
+footer .contact-box:hover {
+    transition: 0.3s;
+    transform: scale(1.1);
+}
+
+footer .contact-sosmed .about-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 65px;
+} 
+
+footer .contact-sosmed .about-img img{
+    height: 35px;
+    margin: 0 15px 0 15px;
+}
+
+
+}
+
+@media (max-width: 836px) and (min-width: 769px){
+.menu-icon {
+      display: flex;
+  }
+  
+  header nav{
+      position: absolute;
+      width: 100%;
+      height: calc(100vh - 50px);
+      background: #333;
+      top: 80px;
+      left: -100%;
+  }
+
+  header .logo p{
+      right: -14%;
+  }
+
+  header .logo img{
+      left: -2.3%;
+  }
+
+  nav{
+      display: none;
+  }
+
+  .toggle-button{
+      display: block;
+
+  }
+
+  .dropdown-menu{
+    display: block;
+    width: 250px;
+}
+
+.dropdown-menu.open{
+    border: 1px black solid;
+    height: 340px;
+}   
+
+.dropdown-menu li{
+    margin-top: 16px;
+}
+
+  main .promo .promo-border{
+    margin: 0px;
+    width: 74.3%;
+    border-radius: 10px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr;
+    /* height: 800px; */
+    /* overflow-y: hidden; */
+
+    /* box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8); */
+}
+
+.swiper {
+    width: 80%;
+    height: 250px;
+    left: 0;
+  }
+
+  .swiper-slide {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin-left: 0;
+  }
+
+  .swiper-pagination{
+    display: none;
+  }
+
+main .promo .text-container{
+margin-top: 0;   
+margin-left: 0;        
+left: 0;
+}
+
+main .promo .text{
+    text-align: center;
+    margin-top: 0;
+    font-size: 13px;
+    margin-left: 0;
+}
+
+/* main .promo .promo-pembungkus-img{
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+    margin-bottom: 0;
+}
+
+main .promo .promo-pembungkus-img img{
+    width: 80%;
+} */
+
+  main .promo .form{
+    margin-top: 30px;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    main .promo .text{
+        text-align: center;
+        font-size: 20px;
+}
+
+main .promo .text-container{
+    margin-top: 20px;     
+    margin-bottom: 30px;      
+}
+
+main .program .program-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    gap: 60px;
+}
+
+main .program .program-box-1{
+    margin-left: 120px;          
+    background-color: white;
+    border-radius: 10px;
+    height: 200px;
+    width: 75%;
+    /* box-shadow: 2px 2px 2px 1.5px rgba(0, 0, 0, 0.8); */
+}
+
+main .program .program-box-2{
+    margin-right: 120px;
+    background-color: white;
+    border-radius: 10px;
+    height: 200px;
+    width: 75%;
+    /* box-shadow: 2px 2px 2px 1.5px rgba(0, 0, 0, 0.8); */
+}
+
+.modal-content {
+position: relative;
+top: 105px;
+background-color: rgb(240, 240, 240);
+margin: 5% auto;
+padding: 50px;
+padding-bottom: 110px;
+border: 1px solid #888;
+width: 50%;
+height: 35%;
+}
+
+main video{
+    margin-top: 80px;
+    border-radius: 10px;
+    width: 74.5%;
+    height: 74.5%;
+}
+
+main .cabang-1 img{
+    margin: 30px;
+    margin-top: 60px;
+    height: 180px;
+}
+
+main .cabang-1 h1{
+    font-size: 20px;
+    margin: 30px;
+}
+
+main .cabang-1 h3{
+    font-size: 15px;
+    margin-left: 30px;
+    max-width: 200px;
+}
+
+main .cabang-1 button{
+    display: flex;
+    padding: 7.5px 25px 7.5px 25px;
+    cursor: pointer;
+    background-color: rgb(28, 28, 77);
+    color: white;
+    margin-top: 0;
+    margin: 45px;
+    justify-self: center;
+    align-self: center;
+}
+
+main .pembayaran .pemisah{
+    background-color: white;
+    margin: 0 105px 0 105px;
+    padding: 20px;
+}
+
+main .pembayaran .pembayaran-metode{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+    margin-left: 105px;
+    margin-right: 105px;
+    gap: 40px;
+}
+
+main .pembayaran-metode .pembayaran-box{
+    background-color: white;
+    height: 130px;
+    width: 100%;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+}
+
+main .pembayaran-box img{
+    margin: 0 auto 0 auto;
+    position: relative;
+    top: 10px;
+    height: 65px;
+}
+
+main .pembayaran-box p{
+    text-align: center;
+    margin: 10px;
+    margin-top: 10px;
+    font-size: 11px;
+}
+
+.testimoni{
+    margin-top: 80px;
+    width: 100%;
+}
+
+.testimoni-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    margin-left: 105px;
+    margin-right: 105px;
+    gap: 40px;
+    overflow: hidden;
+}
+
+.testimoni-border{
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.testimoni img{
+    height: 70px;
+    width: 70px;
+    margin: 10px auto 0 auto;
+    border-radius: 50%;
+}
+
+.testimoni h3{
+    margin: 10px auto 0 auto;
+}
+.testimoni p{
+    margin: 10px auto 20px auto;
+    text-align: center;
+    max-width: 270px;
+}
+
+footer .contact-person .contact-box{
+    display: flex;
+    flex-direction: row;
+    margin-left: 185px;
+    transition: 0.3s;
+    margin-right: 150px;
+}
+
+footer .contact-person .contact-box img{
+    height: 50px;
+    cursor: pointer;
+}
+
+footer .contact-person .contact-box p{
+   color: white;
+   margin: auto 0;
+   font-size: 25px;
+   cursor: pointer;
+}
+
+footer .contact-box:hover {
+    transition: 0.3s;
+    transform: scale(1.1);
+}
+
+footer .contact-sosmed .about-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 105px;
+} 
+
+footer .contact-sosmed .about-img img{
+    height: 35px;
+    margin: 0 15px 0 15px;
+}
+
+}
+
+@media (max-width: 768px) and (min-width: 501px) {
+    .menu-icon {
+        display: flex;
+    }
+    
+    header nav{
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 50px);
+        background: #333;
+        top: 80px;
+        left: -100%;
+    }
+
+    header .logo p{
+        right: -14%;
+    }
+
+    header .logo img{
+        left: -2.3%;
+    }
+
+    nav{
+        display: none;
+    }
+
+    .toggle-button{
+        display: block;
+
+    }
+
+    .dropdown-menu{
+        display: block;
+        width: 250px;
+    }
+    
+    .dropdown-menu.open{
+        border: 1px black solid;
+        height: 340px;
+    }   
+    
+    .dropdown-menu li{
+        margin-top: 16px;
+    }
+
+    main .home img{
+    /* margin-top: 100px; */
+    height: 350px;
+}
+
+main .promo .promo-container{
+    align-items: center;
+    justify-content: center;
+}
+
+/* main .promo .promo-border{         
+    width: 100%;
+} */
+
+main .promo .promo-border{
+    margin: 0px;
+    width: 74.3%;
+    border-radius: 10px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr;
+    /* height: 800px; */
+    /* overflow-y: hidden; */
+
+    /* box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8); */
+}
+
+.swiper {
+    width: 80%;
+    height: 250px;
+    left: 0;
+  }
+
+  .swiper-slide {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin-left: 0;
+  }
+
+  .swiper-pagination{
+    display: none;
+  }
+
+main .promo .text-container{
+margin-top: 0;   
+margin-left: 0;        
+left: 0;
+}
+
+main .promo .text{
+    text-align: center;
+    margin-top: 0;
+    font-size: 20px;
+    margin-left: 0;
+}
+    main .promo .form{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    main .promo .text{
+        text-align: center;
+}
+
+main .promo .text-container{   
+    margin-bottom: 40px;  
+}   
+
+.modal-content {
+position: relative;
+top: 105px;
+background-color: rgb(240, 240, 240);
+margin: 5% auto;
+padding: 50px;
+padding-bottom: 110px;
+border: 1px solid #888;
+width: 50%;
+height: 35%;
+}
+
+main video{
+    margin-top: 80px;
+    border-radius: 10px;
+    width: 74.5%;
+    height: 74.5%;
+}
+
+main .program .program-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    gap: 50px;
+}
+
+main .program .program-box-1{
+    margin-left: 100px;          
+    background-color: white;
+    border-radius: 10px;
+    height: 170px;
+    width: 75%;
+    /* box-shadow: 2px 2px 2px 1.5px rgba(0, 0, 0, 0.8); */
+}
+
+main .program .program-box-2{
+    margin-right: 100px;
+    background-color: white;
+    border-radius: 10px;
+    height: 170px;
+    width: 75%;
+    /* box-shadow: 2px 2px 2px 1.5px rgba(0, 0, 0, 0.8); */
+}
+
+main .program .program-text{
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+main .program p{
+    font-size: 15px;
+}
+
+main .cabang-1{
+    width: 74.3%;
+    border-radius: 10px;
+    background-color: white;
+    margin-bottom: 40px;
+    margin-left: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+main .cabang-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .cabang-1 img{
+    margin-left: 0;
+    height: 200px;
+}
+
+main .cabang-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main .cabang-1 h1{
+    font-size: 25px;
+    margin: 30px;
+}
+
+main .cabang-1 h3{
+    font-size: 20px;
+    margin-left: 30px;
+    max-width: 300px;
+}
+
+main .cabang-1 button{
+    display: flex;
+    padding: 7.5px 25px 7.5px 25px;
+    cursor: pointer;
+    background-color: rgb(28, 28, 77);
+    color: white;
+    margin-top: 0;
+    margin: 45px;
+    justify-self: center;
+    align-self: center;
+}
+
+.ulasan-container {
+display: grid;
+grid-template-columns: 1fr;
+gap: 50px;
+margin: 25px;
+}
+
+main .pembayaran{
+    margin-top: 40px;
+    width: 100%;
+}
+
+main .pembayaran .pemisah{
+    background-color: white;
+    margin: 0 121px 0 121px;
+    padding: 20px;
+}
+
+main .pembayaran .pembayaran-metode{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+    margin-left: 150px;
+    margin-right: 150px;
+    gap: 40px;
+}
+
+main .pembayaran-metode .pembayaran-box{
+    background-color: white;
+    height: 150px;
+    width: 100%;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+}
+
+main .pembayaran-box img{
+    margin: 0 auto 0 auto;
+    position: relative;
+    top: 10px;
+    height: 65px;
+}
+
+main .pembayaran-box p{
+    text-align: center;
+    margin: 10px;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.testimoni-container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    align-items: center;
+    margin-left: 150px;
+    margin-right: 150px;
+    gap: 40px;
+    overflow: hidden;
+}
+
+.pemisah-garisss{
+    width: 96.5%; 
+    margin: 10px auto 0 auto;
+    background-color: white;
+    padding: 2.5px
+}
+
+.copyright-text{
+    color: white; 
+    margin: 10px 0 10px 0; 
+    text-align: center;
+}
+
+footer{
+    background-color: black;
+}
+
+footer .footer-container{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+footer .about{
+    width: 100%;
+    margin-top: 16px;
+    margin-left: 0;
+}
+
+footer .about .about-container{
+    margin: 10px;
+}
+
+footer .about .about-text{
+    color: white;
+    text-align: center;
+}
+
+footer .about .about-text h2{
+    text-align: center;
+    
+}
+
+.pemisah-garis{
+    margin-top: 10px;
+    background-color: white;
+    padding: 2.5px
+}
+
+.pemisah-garisss{
+    width: 96.5%; 
+    margin: 10px auto 0 auto;
+    background-color: white;
+    padding: 2.5px
+}
+
+.copyright-text{
+    color: white; 
+    margin: 10px 0 10px 0; 
+    text-align: center;
+}
+
+footer .about .about-text p{
+    margin: 10px;
+}
+
+footer .contact{
+    width: 100%;
+    overflow: hidden;
+    margin-top: 16px;
+}
+
+footer .contact .contact-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .contact .judul-contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 15px auto;
+}
+
+footer .contact .judul-contact h2{
+    text-align: center;
+    margin: 0 auto 0 auto;
+}
+
+footer .contact-person .contact-box{
+    display: flex;
+    flex-direction: row;
+    transition: 0.3s;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+footer .contact-person .contact-box img{
+    height: 50px;
+    cursor: pointer;
+}
+
+footer .contact-person .contact-box p{
+   color: white;
+   margin: auto 0;
+   font-size: 25px;
+   cursor: pointer;
+}
+
+footer .contact-box:hover {
+    transition: 0.3s;
+    transform: scale(1.1);
+}
+
+footer .contact .contact-sosmed .about-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0;
+} 
+
+footer .contact-sosmed .about-img img{
+    height: 35px;
+    margin: 0 15px 0 15px;
+}
+}
+
+@media (max-width: 565px) and (min-width: 501px) {
+
+    .pemisah-garisss{
+        width: 96.5%; 
+        margin: 10px auto 0 auto;
+        background-color: white;
+        padding: 2.5px
+    }
+    
+    .copyright-text{
+        color: white; 
+        margin: 10px 0 10px 0; 
+        text-align: center;
+    }
+
+.menu-icon {
+        display: flex;
+    }
+    
+    header nav{
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 50px);
+        background: #333;
+        top: 80px;
+        left: -100%;
+    }
+
+    header .logo p{
+        right: -14%;
+    }
+
+    header .logo img{
+        left: -2.3%;
+    }
+
+    nav{
+        display: none;
+    }
+
+    .toggle-button{
+        display: block;
+
+    }
+
+    .dropdown-menu{
+        display: block;
+    }
+
+    main .home img{
+    /* margin-top: 100px; */
+    height: 250px;
+}
+
+main .promo{
+margin-top: 40px;
+}
+
+main .promo .promo-container{
+    align-items: center;
+    justify-content: center;
+}
+
+main .promo .promo-border{
+    margin: 0px;
+    width: 74.3%;
+    border-radius: 10px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr;
+    /* height: 800px; */
+    /* overflow-y: hidden; */
+
+    /* box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8); */
+}
+
+.swiper {
+    width: 80%;
+    height: 200px;
+    left: 0;
+  }
+
+  .swiper-slide {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin-left: 0;
+  }
+
+  .swiper-pagination{
+    display: none;
+  }
+
+main .promo .text-container{
+margin-top: 0;   
+margin-left: 0;        
+left: 0;
+}
+
+main .promo .text{
+    text-align: center;
+    margin-top: 0;
+    font-size: 13px;
+    margin-left: 0;
+}
+
+    main .promo .form{
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    main .promo .text{
+        text-align: center;
+}
+
+main .promo .text-container{ 
+    margin-bottom: 15px;              
+}
+
+.modal-content {
+position: relative;
+top: 105px;
+background-color: rgb(240, 240, 240);
+margin: 5% auto;
+padding: 50px;
+padding-bottom: 110px;
+border: 1px solid #888;
+width: 50%;
+height: 35%;
+}
+
+main video{
+    margin-top: 40px;
+    border-radius: 10px;
+    width: 65%;
+    height: 65%;
+}
+
+main .program .program-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+main .program .program-box-1{    
+    margin: 0;   
+    background-color: white;
+    border-radius: 10px;
+    height: 170px;
+    width: 75%;
+    /* box-shadow: 2px 2px 2px 1.5px rgba(0, 0, 0, 0.8); */
+}
+
+main .program .program-box-2{
+    margin: 0;
+    background-color: white;
+    border-radius: 10px;
+    height: 170px;
+    width: 75%;
+    /* box-shadow: 2px 2px 2px 1.5px rgba(0, 0, 0, 0.8); */
+}
+
+main .program .program-text{
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.ulasan-container {
+display: grid;
+grid-template-columns: 1fr;
+gap: 50px;
+margin: 25px;
+}
+
+main .pembayaran{
+    margin-top: 40px;
+    width: 100%;
+}
+
+main .pembayaran .pemisah{
+    background-color: white;
+    margin: 0 121px 0 121px;
+    padding: 20px;
+}
+
+main .pembayaran .pembayaran-metode{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+    margin-left: 150px;
+    margin-right: 150px;
+    gap: 40px;
+}
+
+main .pembayaran-metode .pembayaran-box{
+    background-color: white;
+    height: 150px;
+    width: 100%;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+}
+
+main .pembayaran-box img{
+    margin: 0 auto 0 auto;
+    position: relative;
+    top: 10px;
+    height: 65px;
+}
+
+main .pembayaran-box p{
+    text-align: center;
+    margin: 10px;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+main .pembayaran .p-bawah{
+    max-width: 500px;
+    margin: 0 auto 0 auto;
+}
+
+.testimoni-container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    align-items: center;
+    margin-left: 150px;
+    margin-right: 150px;
+    gap: 40px;
+    overflow: hidden;
+}
+
+footer{
+    background-color: black;
+}
+
+footer .footer-container{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+footer .about{
+    width: 100%;
+    margin-top: 16px;
+    margin-left: 0;
+}
+
+footer .about .about-container{
+    margin: 10px;
+}
+
+footer .about .about-text{
+    color: white;
+    text-align: center;
+}
+
+footer .about .about-text h2{
+    text-align: center;
+    
+}
+
+.pemisah-garis{
+    margin-top: 10px;
+    background-color: white;
+    padding: 2.5px
+}
+
+footer .about .about-text p{
+    margin: 10px;
+}
+
+footer .contact{
+    width: 100%;
+    overflow: hidden;
+    margin-top: 16px;
+}
+
+footer .contact .contact-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .contact .judul-contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 15px auto;
+}
+
+footer .contact .judul-contact h2{
+    text-align: center;
+    margin: 0 auto 0 auto;
+}
+
+footer .contact-person .contact-box{
+    display: flex;
+    flex-direction: row;
+    transition: 0.3s;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+footer .contact-person .contact-box img{
+    height: 50px;
+    cursor: pointer;
+}
+
+footer .contact-person .contact-box p{
+   color: white;
+   margin: auto 0;
+   font-size: 25px;
+   cursor: pointer;
+}
+
+footer .contact-box:hover {
+    transition: 0.3s;
+    transform: scale(1.1);
+}
+
+footer .contact .contact-sosmed .about-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0;
+} 
+
+footer .contact-sosmed .about-img img{
+    height: 35px;
+    margin: 0 15px 0 15px;
+}
+
+}
+
+@media (max-width: 500px){
+
+    .pemisah-garisss{
+        width: 96.5%; 
+        margin: 10px auto 0 auto;
+        background-color: white;
+        padding: 2.5px
+    }
+    
+    .copyright-text{
+        color: white; 
+        margin: 10px 0 10px 0; 
+        text-align: center;
+    }
+
+.menu-icon {
+        display: flex;
+    }
+    
+    header nav{
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 50px);
+        background: #333;
+        top: 80px;
+        left: -100%;
+    }
+
+    header .logo p{
+        right: -14%;
+    }
+
+    header .logo img{
+        left: -2.3%;
+    }
+
+    nav{
+        display: none;
+    }
+
+    .toggle-button{
+        display: block;
+
+    }
+
+    .dropdown-menu{
+        display: block;
+    }
+
+    main .home img{
+    /* margin-top: 100px; */
+    height: 250px;
+}
+
+main .promo{
+margin-top: 40px;
+}
+
+main .promo .promo-container{
+    align-items: center;
+    justify-content: center;
+}
+
+main .promo .promo-border{
+    margin: 0px;
+    width: 74.3%;
+    border-radius: 10px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr;
+    /* height: 800px; */
+    /* overflow-y: hidden; */
+
+    /* box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8); */
+}
+
+.swiper {
+    width: 80%;
+    height: 200px;
+    left: 0;
+  }
+
+  .swiper-slide {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin-left: 0;
+  }
+
+  .swiper-pagination{
+    display: none;
+  }
+
+main .promo .text-container{
+margin-top: 0;   
+margin-left: 0;        
+left: 0;
+}
+
+main .promo .text{
+    text-align: center;
+    margin-top: 0;
+    font-size: 13px;
+    margin-left: 0;
+}
+
+    main .promo .form{
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    main .promo .text{
+        text-align: center;
+}
+
+main .promo .text-container{ 
+    margin-bottom: 15px;              
+}
+
+.modal-content {
+position: relative;
+top: 105px;
+background-color: rgb(240, 240, 240);
+margin: 5% auto;
+padding: 50px;
+padding-bottom: 110px;
+border: 1px solid #888;
+width: 50%;
+height: 35%;
+}
+
+main video{
+    margin-top: 40px;
+    border-radius: 10px;
+    width: 65%;
+    height: 65%;
+}
+
+main .program .program-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+main .program .program-box-1{    
+    margin: 0;   
+    background-color: white;
+    border-radius: 10px;
+    height: 170px;
+    width: 75%;
+    /* box-shadow: 2px 2px 2px 1.5px rgba(0, 0, 0, 0.8); */
+}
+
+main .program .program-box-2{
+    margin: 0;
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 10px;
+    height: 170px;
+    width: 75%;
+    /* box-shadow: 2px 2px 2px 1.5px rgba(0, 0, 0, 0.8); */
+}
+
+main .program .program-text{
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+main .cabang-1{
+    width: 74.3%;
+    border-radius: 10px;
+    background-color: white;
+    margin-bottom: 40px;
+    margin-left: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+main .cabang-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .cabang-1 img{
+    margin-left: 0;
+    height: 150px;
+    margin-bottom: 0;
+}
+
+main .cabang-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main .cabang-1 h1{
+    font-size: 20px;
+    margin-top: 0;
+    margin: 30px;
+}
+
+main .cabang-1 h3{
+    font-size: 15px;
+    margin-left: 30px;
+    max-width: 300px;
+}
+
+main .cabang-1 button{
+    display: flex;
+    padding: 7.5px 25px 7.5px 25px;
+    cursor: pointer;
+    background-color: rgb(28, 28, 77);
+    color: white;
+    margin-top: 0;
+    margin: 45px;
+    justify-self: center;
+    align-self: center;
+}
+
+main .pembayaran{
+    margin-top: 40px;
+    width: 100%;
+}
+
+main .pembayaran .pemisah{
+    background-color: white;
+    margin: 0 65px 0 65px;
+    padding: 20px;
+}
+
+main .pembayaran .pembayaran-metode{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+    margin-left: 100px;
+    margin-right: 100px;
+    gap: 40px;
+}
+
+main .pembayaran-metode .pembayaran-box{
+    background-color: white;
+    height: 150px;
+    width: 100%;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+}
+
+main .pembayaran-box img{
+    margin: 0 auto 0 auto;
+    position: relative;
+    top: 10px;
+    height: 65px;
+}
+
+main .pembayaran-box p{
+    text-align: center;
+    margin: 10px;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+main .pembayaran .p-bawah{
+    max-width: 400px;
+    margin: 0 auto 0 auto;
+}
+
+.testimoni-container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    align-items: center;
+    margin-left: 100px;
+    margin-right: 100px;
+    gap: 40px;
+    overflow: hidden;
+}
+
+footer{
+    background-color: black;
+}
+
+footer .footer-container{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+footer .about{
+    width: 100%;
+    margin-top: 16px;
+    margin-left: 0;
+}
+
+footer .about .about-container{
+    margin: 10px;
+}
+
+footer .about .about-text{
+    color: white;
+    text-align: center;
+}
+
+footer .about .about-text h2{
+    text-align: center;
+    
+}
+
+.pemisah-garis{
+    margin-top: 10px;
+    background-color: white;
+    padding: 2.5px
+}
+
+footer .about .about-text p{
+    margin: 10px;
+}
+
+footer .contact{
+    width: 100%;
+    overflow: hidden;
+    margin-top: 16px;
+}
+
+footer .contact .contact-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .contact .judul-contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 15px auto;
+}
+
+footer .contact .judul-contact h2{
+    text-align: center;
+    margin: 0 auto 0 auto;
+}
+
+footer .contact-person .contact-box{
+    display: flex;
+    flex-direction: row;
+    transition: 0.3s;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+footer .contact-person .contact-box img{
+    height: 50px;
+    cursor: pointer;
+}
+
+footer .contact-person .contact-box p{
+   color: white;
+   margin: auto 0;
+   font-size: 25px;
+   cursor: pointer;
+}
+
+footer .contact-box:hover {
+    transition: 0.3s;
+    transform: scale(1.1);
+}
+
+footer .contact .contact-sosmed .about-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0;
+} 
+
+footer .contact-sosmed .about-img img{
+    height: 35px;
+    margin: 0 15px 0 15px;
+}
+}
+
+@media (max-width: 450px){
+
+    .pemisah-garisss{
+        width: 96.5%; 
+        margin: 10px auto 0 auto;
+        background-color: white;
+        padding: 2.5px
+    }
+    
+    .copyright-text{
+        color: white; 
+        margin: 10px 0 10px 0; 
+        text-align: center;
+    }
+
+.menu-icon {
+        display: flex;
+    }
+    
+    header nav{
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 50px);
+        background: #333;
+        top: 80px;
+        left: -100%;
+    }
+
+    header .logo p{
+        right: -14%;
+    }
+
+    header .logo img{
+        left: -2.3%;
+    }
+
+    nav{
+        display: none;
+    }
+
+    .toggle-button{
+        display: block;
+
+    }
+
+    .dropdown-menu{
+        display: block;
+    }
+
+    main .home img{
+      height: 220px;
+    }
+
+    main .promo{
+        margin-top: 40px;
+    }
+
+    main .promo .promo-border{
+    margin: 0px;
+    width: 74.3%;
+    border-radius: 10px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr;
+    /* height: 800px; */
+    /* overflow-y: hidden; */
+
+    /* box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8); */
+}
+
+.swiper {
+    width: 80%;
+    height: 180px;
+    left: 0;
+  }
+
+  .swiper-slide {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin-left: 0;
+  }
+
+  .swiper-pagination{
+    display: none;
+  }
+
+main .promo .text-container{
+margin-top: 30px;   
+margin-left: 0;        
+left: 0;
+}
+
+main .promo .text{
+    text-align: center;
+    margin-top: 0;
+    font-size: 13px;
+    margin-left: 0;
+}
+
+main .promo .form{
+/* display: none; */
+display: grid;
+grid-template-columns: 1fr;
+margin-top: 10px;
+}
+
+main .form .text-container{
+margin-bottom: 20px;
+text-align: center;
+font-size: 11px;
+}
+
+
+
+.modal-content {
+position: relative;
+top: 105px;
+background-color: rgb(240, 240, 240);
+margin: 5% auto;
+padding: 50px;
+padding-bottom: 110px;
+border: 1px solid #888;
+width: 50%;
+height: 35%;
+}
+
+main .buton{
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 10px;
+margin-top: 20px;
+margin-left: 10px;
+}
+
+main .buton button{
+padding: 5px;
+background-color: rgb(28, 28, 77);
+color: white;
+}
+
+main video{
+    margin-top: 40px;
+    border-radius: 10px;
+    width: 74.5%;
+    height: 74.5%;
+}
+
+main .program .program-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+main .program .program-box-1{    
+    margin: 0;   
+    background-color: white;
+    border-radius: 10px;
+    height: 170px;
+    width: 75%;
+    /* box-shadow: 2px 2px 2px 1.5px rgba(0, 0, 0, 0.8); */
+}
+
+main .program .program-box-2{
+    margin: 0;
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 10px;
+    height: 170px;
+    width: 75%;
+    /* box-shadow: 2px 2px 2px 1.5px rgba(0, 0, 0, 0.8); */
+}
+
+main .program .program-text{
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+main .pembayaran{
+    margin-top: 40px;
+    width: 100%;
+}
+
+main .pembayaran .pemisah{
+    background-color: white;
+    margin: 0 65px 0 65px;
+    padding: 20px;
+}
+
+main .pembayaran .pembayaran-metode{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+    margin-left: 100px;
+    margin-right: 100px;
+    gap: 40px;
+}
+
+main .pembayaran-metode .pembayaran-box{
+    background-color: white;
+    height: 150px;
+    width: 100%;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+}
+
+main .pembayaran-box img{
+    margin: 0 auto 0 auto;
+    position: relative;
+    top: 10px;
+    height: 65px;
+}
+
+main .pembayaran-box p{
+    text-align: center;
+    margin: 10px;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+main .pembayaran .p-bawah{
+    max-width: 300px;
+    margin: 0 auto 0 auto;
+}
+
+footer{
+    background-color: black;
+}
+
+footer .footer-container{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+footer .about{
+    width: 100%;
+    margin-top: 16px;
+    margin-left: 0;
+}
+
+footer .about .about-container{
+    margin: 10px;
+}
+
+footer .about .about-text{
+    color: white;
+    text-align: center;
+}
+
+footer .about .about-text h2{
+    text-align: center;
+    
+}
+
+.pemisah-garis{
+    margin-top: 10px;
+    background-color: white;
+    padding: 2.5px
+}
+
+footer .about .about-text p{
+    margin: 10px;
+}
+
+footer .contact{
+    width: 100%;
+    overflow: hidden;
+    margin-top: 16px;
+}
+
+footer .contact .contact-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .contact .judul-contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 15px auto;
+}
+
+footer .contact .judul-contact h2{
+    text-align: center;
+    margin: 0 auto 0 auto;
+}
+
+footer .contact-person .contact-box{
+    display: flex;
+    flex-direction: row;
+    transition: 0.3s;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+footer .contact-person .contact-box img{
+    height: 50px;
+    cursor: pointer;
+}
+
+footer .contact-person .contact-box p{
+   color: white;
+   margin: auto 0;
+   font-size: 25px;
+   cursor: pointer;
+}
+
+footer .contact-box:hover {
+    transition: 0.3s;
+    transform: scale(1.1);
+}
+
+footer .contact .contact-sosmed .about-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0;
+} 
+
+footer .contact-sosmed .about-img img{
+    height: 35px;
+    margin: 0 15px 0 15px;
+}
+
+}
+
+@media (max-width: 400px){
+
+    .pemisah-garisss{
+        width: 96.5%; 
+        margin: 10px auto 0 auto;
+        background-color: white;
+        padding: 2.5px
+    }
+    
+    .copyright-text{
+        color: white; 
+        margin: 10px 0 10px 0; 
+        text-align: center;
+    }
+
+.menu-icon {
+        display: flex;
+    }
+    
+    header nav{
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 50px);
+        background: #333;
+        top: 80px;
+        left: -100%;
+    }
+
+    header .logo p{
+        right: -20%;
+    }
+
+    header .logo img{
+        left: -3.3%;
+    }
+
+    nav{
+        display: none;
+    }
+
+    .toggle-button{
+        display: block;
+
+    }
+
+    .dropdown-menu{
+        display: block;
+    }
+
+    main .home img{
+      height: 200px;
+    }
+
+    main .promo{
+        margin-top: 40px;
+    }
+
+    main .promo .promo-border{
+    margin: 0px;
+    width: 74.3%;
+    border-radius: 10px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr;
+    /* height: 800px; */
+    /* overflow-y: hidden; */
+
+    /* box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8); */
+}
+
+.swiper {
+    width: 80%;
+    height: 150px;
+    margin: 10px;
+    left: 0;
+  }
+
+  .swiper-slide {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin-left: 0;
+  }
+
+  .swiper-pagination{
+    display: none;
+  }
+
+main .promo .text-container{
+margin-top: 0;   
+margin-left: 0;        
+left: 0;
+}
+
+main .promo .text{
+    text-align: center;
+    margin-top: 0;
+    font-size: 13px;
+    margin-left: 0;
+}
+
+main .promo .promo-pembungkus-img{
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+    margin-bottom: 0;
+}
+
+main .promo .promo-pembungkus-img img{
+    width: 100%;
+    height: 90%;
+}
+
+main .promo .form{
+/* display: none; */
+display: grid;
+grid-template-columns: 1fr;
+margin-top: 10px;
+}
+
+main .form .text-container{
+margin-bottom: 20px;
+text-align: center;
+font-size: 11px;
+}
+
+
+
+.modal-content {
+position: relative;
+top: 155px;
+background-color: rgb(240, 240, 240);
+margin: 5% auto;
+padding: 50px;
+padding-bottom: 110px;
+border: 1px solid #888;
+width: 50%;
+height: 35%;
+}
+
+main video{
+    margin-top: 40px;
+    border-radius: 10px;
+    width: 74.5%;
+    height: 74.5%;
+}
+
+main .program .program-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+main .program .program-box-1{    
+    margin: 0;   
+    background-color: white;
+    border-radius: 10px;
+    height: 170px;
+    width: 75%;
+    /* box-shadow: 2px 2px 2px 1.5px rgba(0, 0, 0, 0.8); */
+}
+
+main .program .program-box-2{
+    margin: 0;
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 10px;
+    height: 170px;
+    width: 75%;
+    /* box-shadow: 2px 2px 2px 1.5px rgba(0, 0, 0, 0.8); */
+}
+
+main .program .program-text{
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+main .cabang-1 img{
+    margin-left: 0;
+    height: 130px;
+    margin-bottom: 0;
+}
+
+main .pembayaran{
+    margin-top: 40px;
+    width: 100%;
+}
+
+main .pembayaran .pemisah{
+    background-color: white;
+    margin: 0 65px 0 65px;
+    padding: 20px;
+}
+
+main .pembayaran .pembayaran-metode{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+    margin-left: 65px;
+    margin-right: 65px;
+    gap: 40px;
+}
+
+main .pembayaran-metode .pembayaran-box{
+    background-color: white;
+    height: 150px;
+    width: 100%;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+}
+
+main .pembayaran-box img{
+    margin: 0 auto 0 auto;
+    position: relative;
+    top: 10px;
+    height: 65px;
+}
+
+main .pembayaran-box p{
+    text-align: center;
+    margin: 10px;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+footer{
+    background-color: black;
+}
+
+footer .footer-container{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+footer .about{
+    width: 100%;
+    margin-top: 16px;
+    margin-left: 0;
+}
+
+footer .about .about-container{
+    margin: 10px;
+}
+
+footer .about .about-text{
+    color: white;
+    text-align: center;
+}
+
+footer .about .about-text h2{
+    text-align: center;
+    
+}
+
+.pemisah-garis{
+    margin-top: 10px;
+    background-color: white;
+    padding: 2.5px
+}
+
+footer .about .about-text p{
+    margin: 10px;
+}
+
+footer .contact{
+    width: 100%;
+    overflow: hidden;
+    margin-top: 16px;
+}
+
+footer .contact .contact-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .contact .judul-contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 15px auto;
+}
+
+footer .contact .judul-contact h2{
+    text-align: center;
+    margin: 0 auto 0 auto;
+}
+
+footer .contact-person .contact-box{
+    display: flex;
+    flex-direction: row;
+    transition: 0.3s;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+footer .contact-person .contact-box img{
+    height: 50px;
+    cursor: pointer;
+}
+
+footer .contact-person .contact-box p{
+   color: white;
+   margin: auto 0;
+   font-size: 25px;
+   cursor: pointer;
+}
+
+footer .contact-box:hover {
+    transition: 0.3s;
+    transform: scale(1.1);
+}
+
+footer .contact .contact-sosmed .about-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0;
+} 
+
+footer .contact-sosmed .about-img img{
+    height: 35px;
+    margin: 0 15px 0 15px;
+}
+
+}
+
+@media (max-width: 375px){
+    .pemisah-garisss{
+        width: 96.5%; 
+        margin: 10px auto 0 auto;
+        background-color: white;
+        padding: 2.5px
+    }
+    
+    .copyright-text{
+        color: white; 
+        margin: 10px 0 10px 0; 
+        text-align: center;
+    }
+
+.menu-icon {
+        display: flex;
+    }
+    
+    header nav{
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 50px);
+        background: #333;
+        top: 80px;
+        left: -100%;
+    }
+
+    header .logo p{
+        right: -20%;
+    }
+
+    header .logo img{
+        left: -3.3%;
+    }
+
+    nav{
+        display: none;
+    }
+
+    .toggle-button{
+        display: block;
+
+    }
+
+    .dropdown-menu{
+        display: block;
+    }
+
+    main .home img{
+      height: 200px;
+    }
+
+    main .promo{
+        margin-top: 40px;
+    }
+
+    main .promo .promo-border{
+    margin: 0px;
+    width: 74.3%;
+    border-radius: 10px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr;
+    /* height: 800px; */
+    /* overflow-y: hidden; */
+
+    /* box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8); */
+}
+
+.swiper {
+    width: 80%;
+    height: 150px;
+    margin: 10px;
+    left: 0;
+  }
+
+  .swiper-slide {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin-left: 0;
+  }
+
+  .swiper-pagination{
+    display: none;
+  }
+
+main .promo .text-container{
+margin-top: 0;   
+margin-left: 0;        
+left: 0;
+}
+
+main .promo .text{
+    text-align: center;
+    margin-top: 0;
+    font-size: 13px;
+    margin-left: 0;
+}
+
+main .promo .promo-pembungkus-img{
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+    margin-bottom: 0;
+}
+
+main .promo .promo-pembungkus-img img{
+    width: 100%;
+    height: 90%;
+}
+
+main .promo .form{
+/* display: none; */
+display: grid;
+grid-template-columns: 1fr;
+margin-top: 10px;
+}
+
+main .form .text-container{
+margin-bottom: 20px;
+text-align: center;
+font-size: 11px;
+}
+
+
+
+.modal-content {
+position: relative;
+top: 155px;
+background-color: rgb(240, 240, 240);
+margin: 5% auto;
+padding: 50px;
+padding-bottom: 110px;
+border: 1px solid #888;
+width: 50%;
+height: 35%;
+}
+
+main video{
+    margin-top: 40px;
+    border-radius: 10px;
+    width: 74.5%;
+    height: 74.5%;
+}
+
+main .program .program-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+main .program .program-box-1{    
+    margin: 0;   
+    background-color: white;
+    border-radius: 10px;
+    height: 170px;
+    width: 75%;
+    /* box-shadow: 2px 2px 2px 1.5px rgba(0, 0, 0, 0.8); */
+}
+
+main .program .program-box-2{
+    margin: 0;
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 10px;
+    height: 170px;
+    width: 75%;
+    /* box-shadow: 2px 2px 2px 1.5px rgba(0, 0, 0, 0.8); */
+}
+
+main .program .program-text{
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+main .cabang-1 img{
+    margin-left: 0;
+    height: 130px;
+    margin-bottom: 0;
+}
+
+main .pembayaran{
+    margin-top: 40px;
+    width: 100%;
+}
+
+main .pembayaran .pemisah{
+    background-color: white;
+    margin: 0 65px 0 65px;
+    padding: 20px;
+}
+
+main .pembayaran .pembayaran-metode{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+    margin-left: 65px;
+    margin-right: 65px;
+    gap: 40px;
+}
+
+main .pembayaran-metode .pembayaran-box{
+    background-color: white;
+    height: 150px;
+    width: 100%;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+}
+
+main .pembayaran-box img{
+    margin: 0 auto 0 auto;
+    position: relative;
+    top: 10px;
+    height: 65px;
+}
+
+main .pembayaran-box p{
+    text-align: center;
+    margin: 10px;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.testimoni-container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    align-items: center;
+    margin-left: 65px;
+    margin-right: 65px;
+    gap: 40px;
+    overflow: hidden;
+}
+
+.testimoni-border{
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.testimoni img{
+    height: 70px;
+    width: 70px;
+    margin: 10px auto 0 auto;
+    border-radius: 50%;
+}
+
+.testimoni h3{
+    margin: 10px auto 0 auto;
+}
+.testimoni p{
+    font-size: 14px;
+    margin: 10px auto 20px auto;
+    text-align: center;
+    max-width: 270px;
+}
+
+footer{
+    background-color: black;
+}
+
+footer .footer-container{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+footer .about{
+    width: 100%;
+    margin-top: 16px;
+    margin-left: 0;
+}
+
+footer .about .about-container{
+    margin: 10px;
+}
+
+footer .about .about-text{
+    color: white;
+    text-align: center;
+}
+
+footer .about .about-text h2{
+    text-align: center;
+    
+}
+
+.pemisah-garis{
+    margin-top: 10px;
+    background-color: white;
+    padding: 2.5px
+}
+
+footer .about .about-text p{
+    margin: 10px;
+}
+
+footer .contact{
+    width: 100%;
+    overflow: hidden;
+    margin-top: 16px;
+}
+
+footer .contact .contact-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .contact .judul-contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 15px auto;
+}
+
+footer .contact .judul-contact h2{
+    text-align: center;
+    margin: 0 auto 0 auto;
+}
+
+footer .contact-person .contact-box{
+    display: flex;
+    flex-direction: row;
+    transition: 0.3s;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+footer .contact-person .contact-box img{
+    height: 50px;
+    cursor: pointer;
+}
+
+footer .contact-person .contact-box p{
+   color: white;
+   margin: auto 0;
+   font-size: 25px;
+   cursor: pointer;
+}
+
+footer .contact-box:hover {
+    transition: 0.3s;
+    transform: scale(1.1);
+}
+
+footer .contact .contact-sosmed .about-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0;
+} 
+
+footer .contact-sosmed .about-img img{
+    height: 35px;
+    margin: 0 15px 0 15px;
+}
+
+}
+
+@media (max-width: 360px){
+    main .promo .promo-pembungkus-img{
+        display: flex;
+        justify-content: center;
+        margin: 30px;
+        margin-bottom: 0;
+    }
+    
+    main .promo .promo-pembungkus-img img{
+        width: 100%;
+        height: 90%;
+    }
+
+    main .promo .form{
+        /* display: none; */
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-top: 10px;
+    }
+        
+    main .form .text-container{
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 8px;
+    }
+}
+
+@media (max-width: 320px){
+    .pemisah-garisss{
+        width: 96.5%; 
+        margin: 10px auto 0 auto;
+        background-color: white;
+        padding: 2.5px
+    }
+    
+    .copyright-text{
+        color: white; 
+        margin: 10px 0 10px 0; 
+        text-align: center;
+    }
+
+.menu-icon {
+        display: flex;
+    }
+    
+    header nav{
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 50px);
+        background: #333;
+        top: 80px;
+        left: -100%;
+    }
+
+    header .logo p{
+        right: -20%;
+    }
+
+    header .logo img{
+        left: -3.3%;
+    }
+
+    nav{
+        display: none;
+    }
+
+    .toggle-button{
+        display: block;
+
+    }
+
+    .dropdown-menu{
+        display: block;
+    }
+
+    main .home img{
+      height: 200px;
+    }
+
+    main .promo{
+        margin-top: 40px;
+    }
+
+    main .promo .promo-border{
+    margin: 0px;
+    width: 90%;
+    border-radius: 10px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr;
+    /* height: 800px; */
+    /* overflow-y: hidden; */
+
+    /* box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8); */
+}
+
+.swiper {
+    width: 80%;
+    height: 150px;
+    margin: 10px;
+    left: 0;
+    right: 0;
+  }
+
+  .swiper-slide {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin-left: 0;
+  }
+
+  .swiper-pagination{
+    display: none;
+  }
+
+main .promo .text-container{
+margin-top: 0;   
+margin-left: 0;        
+left: 0;
+}
+
+main .promo .text{
+    text-align: center;
+    margin-top: 0;
+    font-size: 13px;
+    margin-left: 0;
+}
+
+main .promo .promo-pembungkus-img{
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+    margin-bottom: 0;
+}
+
+main .promo .promo-pembungkus-img img{
+    width: 100%;
+    height: 90%;
+}
+
+main .promo .form{
+/* display: none; */
+display: grid;
+grid-template-columns: 1fr;
+margin-top: 10px;
+}
+
+main .form .text-container{
+margin-bottom: 20px;
+text-align: center;
+font-size: 11px;
+}
+
+main .promo .button-form button{
+    position: relative;
+    top: 20px;
+    padding: 7.5px 15px 7.5px 15px;
+    cursor: pointer;
+    background-color: rgb(28, 28, 77);
+    color: white;
+}
+
+main button:hover{
+    background-color: rgb(195, 236, 236);
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.5);
+}
+
+.modal-content {
+position: relative;
+top: 155px;
+background-color: rgb(240, 240, 240);
+margin: 5% auto;
+padding: 50px;
+padding-bottom: 110px;
+border: 1px solid #888;
+width: 50%;
+height: 35%;
+}
+
+main video{
+    margin-top: 40px;
+    border-radius: 10px;
+    width: 90%;
+    height: 74.5%;
+}
+
+main .program .program-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+main .program .program-box-1{    
+    margin: 0;   
+    background-color: white;
+    border-radius: 10px;
+    height: 170px;
+    width: 90%;
+    /* box-shadow: 2px 2px 2px 1.5px rgba(0, 0, 0, 0.8); */
+}
+
+main .program .program-box-2{
+    margin: 0;
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 10px;
+    height: 170px;
+    width: 90%;
+    /* box-shadow: 2px 2px 2px 1.5px rgba(0, 0, 0, 0.8); */
+}
+
+main .program .program-text{
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+main .cabang-1{
+    width: 90%;
+}
+
+main .cabang-1 img{
+    margin-left: 0;
+    height: 110px;
+    margin-bottom: 0;
+}
+
+main .cabang-1 h1{
+    margin: 30px;
+    text-align: center;
+}
+
+main .cabang-1 h3{
+margin-left: 30px;
+text-align: center;
+}
+
+main .pembayaran{
+    margin-top: 40px;
+    width: 100%;
+}
+
+main .pembayaran .pemisah{
+    background-color: white;
+    margin: 0 65px 0 65px;
+    padding: 20px;
+}
+
+main .pembayaran .pembayaran-metode{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+    margin-left: 16px;
+    margin-right: 16px;
+    gap: 40px;
+}
+
+main .pembayaran-metode .pembayaran-box{
+    background-color: white;
+    height: 150px;
+    width: 100%;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+}
+
+main .pembayaran-box img{
+    margin: 0 auto 0 auto;
+    position: relative;
+    top: 10px;
+    height: 65px;
+}
+
+main .pembayaran-box p{
+    text-align: center;
+    margin: 10px;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.testimoni-container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    align-items: center;
+    margin-left: 16px;
+    margin-right: 16px;
+    gap: 40px;
+    overflow: hidden;
+}
+
+.testimoni-border{
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.testimoni img{
+    height: 70px;
+    width: 70px;
+    margin: 10px auto 0 auto;
+    border-radius: 50%;
+}
+
+.testimoni h3{
+    margin: 10px auto 0 auto;
+}
+.testimoni p{
+    font-size: 14px;
+    margin: 10px auto 20px auto;
+    text-align: center;
+    max-width: 270px;
+}
+
+footer{
+    background-color: black;
+}
+
+footer .footer-container{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+footer .about{
+    width: 100%;
+    margin-top: 16px;
+    margin-left: 0;
+}
+
+footer .about .about-container{
+    margin: 10px;
+}
+
+footer .about .about-text{
+    color: white;
+    text-align: center;
+}
+
+footer .about .about-text h2{
+    text-align: center;
+    
+}
+
+.pemisah-garis{
+    margin-top: 10px;
+    background-color: white;
+    padding: 2.5px
+}
+
+footer .about .about-text p{
+    margin: 10px;
+}
+
+footer .contact{
+    width: 100%;
+    overflow: hidden;
+    margin-top: 16px;
+}
+
+footer .contact .contact-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .contact .judul-contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 15px auto;
+}
+
+footer .contact .judul-contact h2{
+    text-align: center;
+    margin: 0 auto 0 auto;
+}
+
+footer .contact-person .contact-box{
+    display: flex;
+    flex-direction: row;
+    transition: 0.3s;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+footer .contact-person .contact-box img{
+    height: 50px;
+    cursor: pointer;
+}
+
+footer .contact-person .contact-box p{
+   color: white;
+   margin: auto 0;
+   font-size: 25px;
+   cursor: pointer;
+}
+
+footer .contact-box:hover {
+    transition: 0.3s;
+    transform: scale(1.1);
+}
+
+footer .contact .contact-sosmed .about-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0;
+} 
+
+footer .contact-sosmed .about-img img{
+    height: 35px;
+    margin: 0 15px 0 15px;
+}
+
+}
